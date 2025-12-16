@@ -7,9 +7,6 @@ import plotly.graph_objects as go
 from io import BytesIO
 
 
-# ------------------------------
-# FUNGSI BACA HEADER
-# ------------------------------
 def read_segy_data_header(segy_path, segy_byte_locs, length=4, signed=True):
     segy_byte_locs = list(segy_byte_locs)
 
@@ -46,10 +43,6 @@ if "df_header" not in st.session_state:
 if "data_segy" not in st.session_state:
     st.session_state.data_segy = None
 
-
-# ------------------------------
-# STREAMLIT APP
-# ------------------------------
 st.title("📌 Streamlit Viewer — Post-Stack SEG-Y")
 st.write("Aplikasi sederhana untuk loading SEG-Y post-stack, membaca header CDP/CDP-X/CDP-Y, dan memplot data.")
 
